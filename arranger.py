@@ -1,4 +1,3 @@
-import shutil
 import os
 import getpass
 
@@ -11,7 +10,7 @@ for x in range(len(files)):
             pass
     else:
         if "." in files[x]:
-            filename, file_extension = files[x].split(".")
+            file_extension = files[x].split(".")[-1]
         else:
             pass
     if file_extension in extension:
@@ -32,7 +31,7 @@ for x in range(len(files)):
             pass
     else:
         if "." in files[x]:
-            filename, file_extension = files[x].split(".")
+            file_extension = files[x].split(".")[-1]
             fname = '"'+user +' '+ file_extension +' files"'
             os.system("move "+ '"' +files[x]+'" '+fname)
         else:
